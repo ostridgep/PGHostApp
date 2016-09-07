@@ -47,3 +47,27 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+function checkInstalled(){
+	navigator.startApp.check("com.phonegap.pgchildapp", function(message) { /* success */
+	    alert("Child Installed")
+	}, 
+	function(error) { /* error */
+		 alert("Child Not Installed")
+	});
+}
+function startApp(){
+	navigator.startApp.start("com.phonegap.pgchildapp", function(message) {  /* success */
+	    alert("App Started: "+message); // => OK
+	}, 
+	function(error) { /* error */
+		alert("App failed to Start: "+error);
+	});
+}
+function startAppParams(){
+	navigator.startApp.start([["com.phonegap.pgchildapp"],[{"key1":"value1"},{"key2":"value2"}]], function(message) {  /* success */
+	    alert("App Started: "+message); // => OK
+	}, 
+	function(error) { /* error */
+		alert("App failed to Start: "+error);
+	});
+}
