@@ -74,7 +74,7 @@ function startAppParams(){
 function startAppParams1(){
 	navigator.startApp.start([
 		                  		'com.phonegap.pgchildapp', // applucation
-		                  		, // activity
+		                  		'com.phonegap.pgchildapp.MainActivity', // activity
 		                  		'Param1', // key
 		                  		'Value1',
 		                  		'Param2', // key
@@ -89,7 +89,7 @@ function startAppParams1(){
 function startAppParams2(){
 	navigator.startApp.start([
 		                  		'com.phonegap.pgchildapp', // applucation
-		                  		, // activity
+		                  		'com.phonegap.pgchildapp.MainActivity', // activity
 		                  		'Param1', // key
 		                  		'key1:val1,key2:val2,key3:val3,key4:val4'
 		                  		
@@ -116,7 +116,7 @@ function startAppParams3(){
 function startAppParams4(){
 	navigator.startApp.start([
 	                  		'com.phonegap.pgchildapp', // applucation
-	                  		'ccom.phonegap.pgchildapp.MainActivity', // activity
+	                  		'com.phonegap.pgchildapp.MainActivity', // activity
 	                  		'Param1', // key
 	                  		'Value1' // value
 	                  	], function(message) { /* success */
