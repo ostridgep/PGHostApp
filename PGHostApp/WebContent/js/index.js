@@ -16,6 +16,34 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+function checkPassedParams(){
+
+
+		    window.plugins.launchmyapp.getLastIntent(function(url) {
+		    	alert("url:"+url)
+		      if (url.indexOf('myjobshost://' > -1)) {
+		    	  xx=url.split("?")
+		    	  xxx=xx.split("=")
+		    	  if(xxx[0]=="latlong")
+		    	  	{
+		    		 alert(xxx[1])
+		    		  }
+		    	  else{
+		    		  alert("received url: " + xxx[0]+"---"+xxx[1]); 
+		    	  	}
+		    	  
+		    	  
+		       
+		      } else {
+		    	  alert("ignore intent: " + url);
+		      }
+		    }, function(error) {
+		    	alert("no intent received");
+		    });
+		   
+
+
+}
 var app = {
     // Application Constructor
     initialize: function() {
@@ -27,6 +55,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        checkPassedParams();
     },
     // deviceready Event Handler
     //
