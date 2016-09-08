@@ -72,7 +72,14 @@ function startAppParams(){
 	});
 }
 function startAppParams1(){
-	navigator.startApp.start(["com.phonegap.pgchildapp","value1"], function(message) {  /* success */
+	navigator.startApp.start([
+		                  		'com.phonegap.pgchildapp', // applucation
+		                  		, // activity
+		                  		'Param1', // key
+		                  		'Value1',
+		                  		'Param2', // key
+		                  		'Value2' // value// value
+		                  	], function(message) { /* success */
 	    alert("App params1  Started: "+message); // => OK
 	}, 
 	function(error) { /* error */
@@ -80,7 +87,13 @@ function startAppParams1(){
 	});
 }
 function startAppParams2(){
-	navigator.startApp.start([["com.phonegap.pgchildapp"],["value1"]], function(message) {  /* success */
+	navigator.startApp.start([
+		                  		'com.phonegap.pgchildapp', // applucation
+		                  		, // activity
+		                  		'Param1', // key
+		                  		'key1:val1,key2:val2,key3:val3,key4:val4'
+		                  		
+		                  	], function(message) { /* success */
 	    alert("App params2  Started: "+message); // => OK
 	}, 
 	function(error) { /* error */
@@ -88,16 +101,26 @@ function startAppParams2(){
 	});
 }
 function startAppParams3(){
-	navigator.startApp.start(["com.phonegap.pgchildapp",[{"key1":"value1"},{"key2":"value2"}]], function(message) {  /* success */
-	    alert("App params3  Started: "+message); // => OK
+	navigator.startApp.start([
+	                  		'com.phonegap.pgchildapp', // applucation
+	                  		, // activity
+	                  		'Param1', // key
+	                  		'Value1' // value
+	                  	], function(message) { /* success */
+		   alert("App params3  Started: "+message); // => OK
 	}, 
 	function(error) { /* error */
 		alert("App params3 failed to Start: "+error);
 	});
 }
 function startAppParams4(){
-	navigator.startApp.start(["com.phonegap.pgchildapp",{"key1":"John", "key2":"Doe"}], function(message) {  /* success */
-	    alert("App params4  Started: "+message); // => OK
+	navigator.startApp.start([
+	                  		'com.phonegap.pgchildapp', // applucation
+	                  		'ccom.phonegap.pgchildapp.MainActivity', // activity
+	                  		'Param1', // key
+	                  		'Value1' // value
+	                  	], function(message) { /* success */
+		   alert("App params4  Started: "+message); // => OK
 	}, 
 	function(error) { /* error */
 		alert("App params4 failed to Start: "+error);
