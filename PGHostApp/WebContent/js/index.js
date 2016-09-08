@@ -26,8 +26,11 @@ function checkPassedParams(){
 		    	  xxx=xx.split("=")
 		    	  if(xxx[0]=="latlong")
 		    	  	{
-		    		 alert(xxx[1])
-		    		  }
+		    		  alert(xxx[1])
+		    		  document.getElementById("ll").value=xxx[1]
+		    	  	}
+		    		 
+		    		 
 		    	  else{
 		    		  alert("received url: " + xxx[0]+"---"+xxx[1]); 
 		    	  	}
