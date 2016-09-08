@@ -74,14 +74,7 @@ function startAppParams(){
 	});
 }
 function startAppParams1(){
-	navigator.startApp.start([
-		                  		'com.phonegap.pgchildapp', // applucation
-		                  		'com.phonegap.pgchildapp.MainActivity', // activity
-		                  		'Param1', // key
-		                  		'Value1',
-		                  		'Param2', // key
-		                  		'Value2' // value// value
-		                  	], function(message) { /* success */
+	navigator.startApp.start([["com.phonegap.pgchildapp", "com.phonegap.pgchildapp.MainActivity"], [{"product_id":"100"}]], function(message) { /* success */
 	    alert("App params1  Started: "+message); // => OK
 	}, 
 	function(error) { /* error */
