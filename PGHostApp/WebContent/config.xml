@@ -43,7 +43,7 @@
     -->
 
     <!-- Plugins -->
-	<gap:plugin name="com.venkykowshik.startapp" spec="0.0.1" source="pgb" />
+	<gap:name="com.surfernetwork.startapp" spec="1.0.0" source="pgb" />
     <!-- Core plugins -->
     <plugin name="cordova-plugin-battery-status" />
     <plugin name="cordova-plugin-camera" />
