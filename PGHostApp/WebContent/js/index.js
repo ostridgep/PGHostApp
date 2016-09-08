@@ -65,9 +65,9 @@ function startApp(){
 }
 function startAppParams(){
 	navigator.startApp.start([["com.phonegap.pgchildapp"],[{"key1":"value1"},{"key2":"value2"}]], function(message) {  /* success */
-	    alert("App Started: "+message); // => OK
+	    alert("App params  Started: "+message); // => OK
 	}, 
 	function(error) { /* error */
-		alert("App failed to Start: "+error);
+		alert("App params failed to Start: "+error);
 	});
 }
