@@ -64,10 +64,34 @@ function startApp(){
 	});
 }
 function startAppParams(){
-	navigator.startApp.start([["com.phonegap.pgchildapp"],["value1"]], function(message) {  /* success */
+	navigator.startApp.start([["com.phonegap.pgchildapp"],"value1"], function(message) {  /* success */
 	    alert("App params  Started: "+message); // => OK
 	}, 
 	function(error) { /* error */
 		alert("App params failed to Start: "+error);
+	});
+}
+function startAppParams1(){
+	navigator.startApp.start(["com.phonegap.pgchildapp","value1"], function(message) {  /* success */
+	    alert("App params1  Started: "+message); // => OK
+	}, 
+	function(error) { /* error */
+		alert("App params1 failed to Start: "+error);
+	});
+}
+function startAppParams2(){
+	navigator.startApp.start([["com.phonegap.pgchildapp","com.phonegap.pgchildapp.Activity"],["value1"]], function(message) {  /* success */
+	    alert("App params2  Started: "+message); // => OK
+	}, 
+	function(error) { /* error */
+		alert("App params2 failed to Start: "+error);
+	});
+}
+function startAppParams3(){
+	navigator.startApp.start([["com.phonegap.pgchildapp","com.phonegap.pgchildapp.Activity"],[{"ke1":"value1"},{"ke2":"value2"}]], function(message) {  /* success */
+	    alert("App params3  Started: "+message); // => OK
+	}, 
+	function(error) { /* error */
+		alert("App params3 failed to Start: "+error);
 	});
 }
