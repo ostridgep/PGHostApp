@@ -56,6 +56,7 @@ function checkInstalled(){
 	});
 }
 function startApp(){
+	localStorage.setItem("Parameter", "Paul Ostridge");
 	navigator.startApp.start("com.phonegap.pgchildapp", function(message) {  /* success */
 	    alert("App Started: "+message); // => OK
 	}, 
@@ -64,11 +65,12 @@ function startApp(){
 	});
 }
 function startAppParams(){
-	navigator.startApp.start([["com.phonegap.pgchildapp"],"value1"], function(message) {  /* success */
-	    alert("App params  Started: "+message); // => OK
+	localStorage.setItem("Parameter", "Fred");
+	navigator.startApp.start("com.phonegap.pgchildapp", function(message) {  /* success */
+	    alert("App Started: "+message); // => OK
 	}, 
 	function(error) { /* error */
-		alert("App params failed to Start: "+error);
+		alert("App failed to Start: "+error);
 	});
 }
 function startAppParams1(){
