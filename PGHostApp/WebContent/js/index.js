@@ -91,10 +91,10 @@ function startApp(){
 	});
 }
 function startApp1(){
-	ref=cordova.InAppBrowser.open('myjobschild://?MYJOBS=xx','_blank')
-	ref.addEventListener('loadstart',function(event) { alert("loadstart"+event.url); });
-	ref.addEventListener('loadstop',function(event) { alert("loadstop"+event.url); });
-	ref.addEventListener('exit',function(event) { alert("exit"+event.url); });
+	localStorage.setItem('myCat', 'Tom');
+	ref=cordova.InAppBrowser.open('myjobschild://?MYJOBS=xx','_system')
+	alert("Back")
+	alert(localStorage.getItem('myCat'))
 }
 function startApp2(){
 	location.href='myjobschild://?MYJOBS=xx'
