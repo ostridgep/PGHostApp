@@ -94,7 +94,7 @@ function startApp1(){
 	localStorage.setItem('myCat', 'Tom');
 	ref=cordova.InAppBrowser.open('myjobschild://?MYJOBS=xx','_system')
 	alert("Back")
-	window.plugins.paste(function (text) { 
+	window.plugins.clipboard.paste(function (text) { 
 		alert("copied Text:"+text); 
 		});
 	
