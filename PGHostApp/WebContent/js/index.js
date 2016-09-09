@@ -95,10 +95,10 @@ function startApp1(){
 	ref=cordova.InAppBrowser.open('myjobschild://?MYJOBS=xx','_system')
 	alert("Back")
 	window.plugins.clipboard.paste(function (text) { 
-		alert("copied Text:"+text); 
+		document.getElementById('ll').value=text; 
 		});
 	
-	alert(localStorage.getItem('myCat'))
+	
 }
 function startApp2(){
 	location.href='myjobschild://?MYJOBS=xx'
