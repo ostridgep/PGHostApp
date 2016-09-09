@@ -91,7 +91,7 @@ function startApp(){
 	});
 }
 function startApp1(){
-	window.open('myjobschild://?MYJOBS=xx')
+	window.open('myjobschild://?MYJOBS=xx','_system')
 }
 function startApp2(){
 	location.href='myjobschild://?MYJOBS=xx'
