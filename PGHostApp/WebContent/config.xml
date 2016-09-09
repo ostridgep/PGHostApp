@@ -43,6 +43,9 @@
     -->
 
     <!-- Plugins -->
+<gap:plugin name="cordova-plugin-customurlscheme" source="npm">
+  <param name="URL_SCHEME" value="myjobshost" />
+</gap:plugin>
 	<plugin name="com.venkykowshik.startapp" spec="0.0.1" source="pgb" />
     <!-- Core plugins -->
     <plugin name="cordova-plugin-battery-status" />
@@ -69,9 +72,7 @@
     <!--
         <plugin name="com.phonegap.plugins.barcodescanner" />
     -->
-<gap:plugin name="cordova-plugin-customurlscheme" source="npm">
-  <param name="URL_SCHEME" value="myjobshost" />
-</gap:plugin>
+
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
