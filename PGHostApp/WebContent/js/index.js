@@ -70,14 +70,7 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
+      
     }
 };
 function checkInstalled(){
@@ -97,22 +90,11 @@ function startApp(){
 		alert("App failed to Start: "+error);
 	});
 }
-function startAppParams(){
-	localStorage.setItem("Parameter", "Fred");
-	navigator.startApp.start("com.phonegap.pgchildapp", function(message) {  /* success */
-	    alert("App Started: "+message); // => OK
-	}, 
-	function(error) { /* error */
-		alert("App failed to Start: "+error);
-	});
+function startApp1(){
+	window.open('myjobschild://?MYJOBS=xx')
 }
-function startAppParams1(){
-	navigator.startApp.start([["com.phonegap.pgchildapp", "com.phonegap.pgchildapp.MainActivity"], [{"product_id":"100"}]], function(message) { /* success */
-	    alert("App params1  Started: "+message); // => OK
-	}, 
-	function(error) { /* error */
-		alert("App params1 failed to Start: "+error);
-	});
+function startApp2(){
+	location.href='myjobschild://?MYJOBS=xx'
 }
 function startAppParams2(){
 	navigator.startApp.start([
