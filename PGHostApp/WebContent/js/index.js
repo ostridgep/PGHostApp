@@ -91,7 +91,7 @@ function startApp(){
 	});
 }
 function startApp1(){
-	ref=window.open('myjobschild://?MYJOBS=xx','_system')
+	ref=cordova.InAppBrowser.open('myjobschild://?MYJOBS=xx','_system')
 	ref.addEventListener('loadstart',function(event) { alert("loadstart"+event.url); });
 	ref.addEventListener('loadstop',function(event) { alert("loadstop"+event.url); });
 	ref.addEventListener('exit',function(event) { alert("exit"+event.url); });
