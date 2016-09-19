@@ -93,6 +93,9 @@ function startApp(){
 function startApp1(){
 	
 	ref=cordova.InAppBrowser.open('myjobsmap://?MYJOBS=getlocation','_system')
+	ref.addEventListener('exit', function(event) { 
+
+			alert("its a exit"+event.url); });
 	alert("Back")
 	window.plugins.clipboard.paste(function (text) { 
 		document.getElementById('ll').value=text; 
