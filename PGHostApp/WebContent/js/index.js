@@ -16,37 +16,37 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-function checkPassedParams(){
-
-
-		    window.plugins.launchmyapp.getLastIntent(function(url) {
-		    	alert("url:"+url)
+var handleOpenURL = function(url) {
+        
+            checkCall(url)
+        };
+        function checkCall(url){
+        	 
+        	
+        	 alert(url)  
+        	
 		      if (url.indexOf('myjobshost://' > -1)) {
-		    	  xx=url.split("?")
-		    	  xxx=xx.split("=")
-		    	  if(xxx[0]=="latlong")
-		    	  	{
-		    		  alert(xxx[1])
-		    		  document.getElementById("ll").value=xxx[1]
-		    	  	}
-		    		 
-		    		 
-		    	  else{
-		    		  alert("received url: " + xxx[0]+"---"+xxx[1]); 
-		    	  	}
-		    	  
-		    	  
-		       
-		      } else {
-		    	  alert("ignore intent: " + url);
-		      }
-		    }, function(error) {
-		    	alert("no intent received");
-		    });
-		   
-
-
-}
+	    	  url_parameters=url.split("?")
+	    	  subprameters=url_parameters[1].split("=")
+	    	  if(subprameters[0]=="MYJOBS")
+	    	  	{
+	    		
+	    		 functions=subprameters[1].split("|")
+	    		 mapmode=subprameters[1];
+	    		 alert("got here"+mapmode)
+	    		 if(functions[0]=="setlocation") {		    			 
+	    			 document.getElementById('ll').value=functions[1]
+	    				
+	    		 		}
+	    		}
+	    	  
+	    	  
+	    	  
+	       
+	      }else{
+	    	  alert("Not a MYJOBS CAll")
+	      }
+}  
 var app = {
     // Application Constructor
     initialize: function() {
@@ -92,7 +92,7 @@ function startApp(){
 }
 function startApp1(){
 	
-	ref=cordova.InAppBrowser.open('myjobsmap://?MYJOBS=getlocation','_self')
+	ref=cordova.InAppBrowser.open('myjobsmap://?MYJOBS=getlocation|myjobshost|setlocation','_system')
 	ref.addEventListener('exit', function(event) { 
 
 			alert("its a exit"+event.url); });
