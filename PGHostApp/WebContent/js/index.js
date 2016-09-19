@@ -92,7 +92,7 @@ function startApp(){
 }
 function startApp1(){
 	
-	ref=cordova.InAppBrowser.open('myjobsmap://?MYJOBS=getlocation','_system')
+	ref=cordova.InAppBrowser.open('myjobsmap://?MYJOBS=getlocation','_blank')
 	ref.addEventListener('exit', function(event) { 
 
 			alert("its a exit"+event.url); });
