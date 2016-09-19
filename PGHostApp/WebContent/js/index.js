@@ -92,7 +92,7 @@ function startApp(){
 }
 function startApp1(){
 	
-	ref=cordova.InAppBrowser.open('myjobsmap://?MYJOBS=xx','_system')
+	ref=cordova.InAppBrowser.open('myjobsmap://?MYJOBS=getlocation','_system')
 	alert("Back")
 	window.plugins.clipboard.paste(function (text) { 
 		document.getElementById('ll').value=text; 
