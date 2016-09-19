@@ -91,8 +91,8 @@ function startApp(){
 	});
 }
 function startApp1(){
-	localStorage.setItem('myCat', 'Tom');
-	ref=cordova.InAppBrowser.open('myjobschild://?MYJOBS=xx','_system')
+	
+	ref=cordova.InAppBrowser.open('myjobsmap://?MYJOBS=xx','_system')
 	alert("Back")
 	window.plugins.clipboard.paste(function (text) { 
 		document.getElementById('ll').value=text; 
@@ -101,7 +101,7 @@ function startApp1(){
 	
 }
 function startApp2(){
-	location.href='myjobschild://?MYJOBS=xx'
+	location.href='myjobsmap://?MYJOBS=xx'
 }
 function startAppParams2(){
 	navigator.startApp.start([
